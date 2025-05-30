@@ -1,0 +1,17 @@
+name: Web CI/CD
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Verificar archivos HTML, CSS y JS
+      run: |
+        echo "Lint simulación: validando HTML, CSS y JS..."
+        ls -la
